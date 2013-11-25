@@ -1,6 +1,6 @@
 {
   "name": "thenlint",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "A linter for promises that checks for possible Promise.then usage errors and advises to use Promise.done instead.",
   "main": "lint.js",
   "bin": {

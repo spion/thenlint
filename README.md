@@ -5,9 +5,9 @@ and advises to use `Promise.done` instead.
 
 # Usage
 
-From the command-line (recommended):
+From the command-line:
 
-    ngbmin <file.js> [<other.js> ...]
+    thenlint <file.js> [<other.js> ...]
 
 ## license
 

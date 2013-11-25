@@ -11,4 +11,9 @@ t.test('common patterns', function(t) {
     t.end();
 });
 
-
+t.test('parse error', function(t) {
+    var res = find(fs.readFileSync(
+        path.join(__dirname, '..', 'example', 'parse-error.js'), 'utf8'));
+    console.log(res[0].toString());
+    t.end();
+});

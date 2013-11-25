@@ -29,5 +29,13 @@
     "lint"
   ],
   "author": "spion",
-  "license": "MIT"
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/spion/thenlint.git"
+  },
+  "bugs": {
+    "url": "https://github.com/spion/thenlint/issues"
+  },
+  "homepage": "https://github.com/spion/thenlint"
 }

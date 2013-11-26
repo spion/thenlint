@@ -11,10 +11,10 @@
     "test": "test"
   },
   "dependencies": {
-    "falafel": "~0.3.1",
     "optimist": "~0.6.0",
-    "through": "~2.3.4",
-    "multi-glob": "~0.4.0"
+    "multi-glob": "~0.4.0",
+    "episcope": "0.0.1",
+    "esprima": "~1.0.4"
   },
   "devDependencies": {
     "tap": "~0.4.6"

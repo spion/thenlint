@@ -7,8 +7,7 @@ var argv = require('optimist')
 
 var fs = require('fs');
 
-var find = require('../lint.js');
-
+var find = require('../lib/lint.js');
 
 var glob = require('multi-glob').glob;
 

@@ -64,3 +64,23 @@ function hard_ok(x) {
 }
 
 
+function chained(x) {
+    return x.then(function(y) {
+        return get(y);
+    }).then(function(z) {
+        lol(z);
+    }).then(function(a) {
+        return a;
+    });
+}
+
+function chained_ok(x) {
+    return x.then(function(y) {
+        return get(y);
+    }).then(function(z) {
+        return lol(z);
+    }).then(function(a) {
+        return a;
+    });
+}
+

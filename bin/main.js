@@ -13,7 +13,9 @@ var glob = require('multi-glob').glob;
 
 glob(argv._, function(err, files) {    
     var report = files.reduce(function(acc, filename) {
-        return acc.concat(find(fs.readFileSync(filename, 'utf8'), filename)
+        try { var content = fs.readFileSync(filename, 'utf8')  }
+        catch (e) { return acc; }
+        return acc.concat(find(content, filename)
                 .map(function(x) { return x.toString(); }));
     }, []).join('\n');
     console.log(report);

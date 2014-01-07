@@ -8,6 +8,10 @@ From the command-line:
 
     thenlint <file.js> [<other.js> ...]
     
+As a library:
+
+    report = require('thenlint')(fileContent, filename)
+      .map(function(item) { return item.toString(); }).join('\n');
     
 ### example errors    
 

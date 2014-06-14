@@ -11,14 +11,18 @@ var find = require('../lib/lint.js');
 
 var glob = require('multi-glob').glob;
 
-glob(argv._, function(err, files) {    
-    var report = files.reduce(function(acc, filename) {
-        try { var content = fs.readFileSync(filename, 'utf8')  }
+glob(argv._, function(err, files) {
+    var errors = files.reduce(function(acc, filename) {
+        var content;
+        try { content = fs.readFileSync(filename, 'utf8')  }
         catch (e) { return acc; }
         return acc.concat(find(content, filename)
                 .map(function(x) { return x.toString(); }));
-    }, []).join('\n');
+    }, []);
+    var report = errors.join('\n');
     console.log(report);
+    if (errors.length > 0)
+        process.exit(1)
 });
 
 
